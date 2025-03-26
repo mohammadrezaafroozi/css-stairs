@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-color: rgba(145, 145, 145, 0.914);
+        }
+        ul{
+            width: 500px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            transform:  rotate3d(11, -23, 3, 306deg);
+           
+            &:hover{
+                    >li{
+                      &::before{
+                        margin-top: -150px;
+                      }
+                    }
+                }
+            >li{
+                width: 100%;
+                height: 150px;
+                list-style: none;
+                border: 2px solid rgb(95, 4, 95);
+                /* background-color: rgba(71, 71, 249, 0.936); */
+                display: flex;justify-content: center;align-items: center;
+                flex-wrap: wrap;
+                font-size: 50px;
+                overflow: hidden;
+                transform-style: preserve-3d;
+               
+              
+                &::before, &::after{
+                    content: 'coded by me';
+                    color: white;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    background-color: rgba(215, 20, 208, 0.759);
+                    justify-content: center;
+                  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                 font-weight: bold;
+                  text-transform: uppercase;
+                    transition: .6s linear;
+                }
+                &:nth-of-type(2){
+                    transform-origin: top;
+                    transform: rotateX(90deg);
+                }
+                &:nth-of-type(3){
+                    transform-origin: top;
+                       transform: translate3d(0px, -150px, 150px)
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
